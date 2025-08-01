@@ -1,10 +1,13 @@
 === Documentation Auto-Update Summary ===
-Update Date: 2025-08-01 18:50:03
+Update Date: 2025-08-01 19:03:42
 
 Recent Commits:
+  - c8ecb09 🎨 Update digital branding CTA buttons
   - dc2549b 📚 Update documentation for main branch
   - dc0a7b0 📚 Auto-generated documentation update
-  - dc66de4 📚 Final documentation sync
+
+Frontend Changes:
+  - templates/core/digital_branding.html
 
 Backend Changes:
   - docs_update_summary.txt
