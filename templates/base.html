@@ -30,6 +30,7 @@
                 </a>
                 <nav class="header-nav" id="header-nav">
                     <a href="{% url 'core:homepage' %}" class="nav-link {% if request.resolver_match.url_name == 'homepage' %}active{% endif %}">Home</a>
+                    <a href="{% url 'core:digital_branding' %}" class="nav-link {% if request.resolver_match.url_name == 'digital_branding' %}active{% endif %}">Digital Branding</a>
                     <a href="{% url 'agent_base:marketplace' %}" class="nav-link {% if request.resolver_match.url_name == 'marketplace' %}active{% endif %}">AI Marketplace</a>
                     <a href="{% url 'core:pricing' %}" class="nav-link {% if request.resolver_match.url_name == 'pricing' %}active{% endif %}">Pricing</a>
                 </nav>

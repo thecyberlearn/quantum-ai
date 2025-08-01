@@ -1,0 +1,523 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Digital Branding Services - Quantum Tasks AI{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/digital-branding.css' %}">
+{% endblock %}
+
+{% block content %}
+<style>
+/* Override main-container for full-width sections */
+.main-container {
+    max-width: none;
+    padding: 0;
+}
+</style>
+
+<!-- Hero Section -->
+<section id="digital-branding-hero" class="digital-branding-hero">
+    <div class="hero-container">
+        <!-- Trust Badge -->
+        <div class="trust-badge">
+            <span class="trust-badge-emoji">✨</span>
+            <span>Trusted Digital Brand Partner</span>
+        </div>
+
+        <h1 class="hero-title">
+            <span class="hero-title-gradient">
+                Digital Branding
+            </span>
+            <br />
+            <span class="hero-title-normal">
+                Services
+            </span>
+        </h1>
+
+        <p class="hero-description">
+            Elevate Your Brand in the AI-Driven Era. Unlock unparalleled digital visibility, recognition, and growth with Quantum Task AI's expert digital branding solutions.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-buttons">
+            {% if user.is_authenticated %}
+                <a href="https://form.jotform.com/252121444918050" target="_blank" class="btn-primary">
+                    Start Discovery
+                </a>
+                <a href="#our-process" class="btn-secondary">
+                    View Process
+                </a>
+            {% else %}
+                <a href="https://form.jotform.com/252121444918050" target="_blank" class="btn-primary">
+                    Get Started
+                </a>
+                <a href="#our-process" class="btn-secondary">
+                    Learn More
+                </a>
+            {% endif %}
+        </div>
+
+        <!-- Trust Indicators -->
+        <div class="trust-indicators">
+            <div class="trust-card">
+                <div class="trust-number">
+                    AI-Powered
+                </div>
+                <div class="trust-text">
+                    Strategies
+                </div>
+            </div>
+            <div class="trust-card">
+                <div class="trust-number">
+                    End-to-End
+                </div>
+                <div class="trust-text">
+                    Digital Presence
+                </div>
+            </div>
+            <div class="trust-card">
+                <div class="trust-number">
+                    Custom
+                </div>
+                <div class="trust-text">
+                    Tailored Approach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="why-choose-us">
+    <div class="section-container">
+        <!-- Section Header -->
+        <div class="section-header">
+            <div class="section-badge">
+                <span class="section-badge-icon">🎯</span>
+                <span class="section-badge-text">Why Choose Us</span>
+            </div>
+            <h2 class="section-title">
+                AI-Powered Digital Excellence
+            </h2>
+            <p class="section-subtitle">
+                Transform your brand with cutting-edge AI strategies and comprehensive digital solutions
+            </p>
+        </div>
+
+        <div class="why-choose-grid">
+            <div class="choice-card">
+                <div class="choice-icon">🤖</div>
+                <h3 class="choice-title">AI-Powered Strategies</h3>
+                <p class="choice-description">
+                    Harness cutting-edge AI to analyze your digital landscape, audience trends, and competitor benchmarks, ensuring your brand stands out in the AI-driven era.
+                </p>
+            </div>
+            <div class="choice-card">
+                <div class="choice-icon">🌐</div>
+                <h3 class="choice-title">End-to-End Digital Presence</h3>
+                <p class="choice-description">
+                    From LLM, SEO and social activation to influencer partnerships and review management - we handle every aspect of your digital brand presence.
+                </p>
+            </div>
+            <div class="choice-card">
+                <div class="choice-icon">⚡</div>
+                <h3 class="choice-title">Custom-Tailored Approach</h3>
+                <p class="choice-description">
+                    Our process adapts to your unique vision, market challenges, and growth ambitions, delivering personalized strategies that drive real results.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Process Section -->
+<section id="our-process" class="our-process">
+    <div class="section-container">
+        <div class="section-header">
+            <div class="section-badge">
+                <span class="section-badge-icon">📋</span>
+                <span class="section-badge-text">Our Process</span>
+            </div>
+            <h2 class="section-title">
+                The SOSTAC+RACE Method
+            </h2>
+            <p class="section-subtitle">
+                A unified, data-driven planning system that combines proven strategy with powerful digital execution
+            </p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3 class="step-title">Situation Analysis</h3>
+                    <p class="step-description">
+                        Understand your brand's current status, digital footprint, and competitor landscape to establish a baseline for growth.
+                    </p>
+                </div>
+            </div>
+            <div class="process-step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3 class="step-title">Objectives</h3>
+                    <p class="step-description">
+                        Set SMART goals to grow brand awareness, engagement, leads, and loyalty with measurable targets and timelines.
+                    </p>
+                </div>
+            </div>
+            <div class="process-step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3 class="step-title">Strategy</h3>
+                    <p class="step-description">
+                        Map your customer journey, segment audiences, define your value proposition, and select optimal channels for maximum impact.
+                    </p>
+                </div>
+            </div>
+            <div class="process-step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3 class="step-title">Tactics (RACE Framework)</h3>
+                    <p class="step-description">
+                        Execute with Reach (visibility), Act (engagement), Convert (sales), and Engage (loyalty) strategies across all channels.
+                    </p>
+                </div>
+            </div>
+            <div class="process-step-card">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3 class="step-title">Action</h3>
+                    <p class="step-description">
+                        Assign tasks, manage timelines, and ensure streamlined brand asset creation across all digital channels and platforms.
+                    </p>
+                </div>
+            </div>
+            <div class="process-step-card">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <h3 class="step-title">Control</h3>
+                    <p class="step-description">
+                        Monitor analytics, measure KPIs, and refine strategy through continuous feedback loops for ongoing optimization.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RACE Framework Details -->
+        <div class="race-framework">
+            <h3 class="race-title">RACE Framework Breakdown</h3>
+            <div class="race-grid">
+                <div class="race-card">
+                    <div class="race-phase">
+                        <span class="race-icon">📢</span>
+                        <h4>Reach</h4>
+                    </div>
+                    <div class="race-focus">Maximize visibility</div>
+                    <div class="race-actions">LLM & SEO, paid ads, influencer partnerships, digital PR</div>
+                </div>
+                <div class="race-card">
+                    <div class="race-phase">
+                        <span class="race-icon">💬</span>
+                        <h4>Act</h4>
+                    </div>
+                    <div class="race-focus">Drive engagement</div>
+                    <div class="race-actions">Content marketing, landing pages, audience interaction</div>
+                </div>
+                <div class="race-card">
+                    <div class="race-phase">
+                        <span class="race-icon">🎯</span>
+                        <h4>Convert</h4>
+                    </div>
+                    <div class="race-focus">Increase conversions</div>
+                    <div class="race-actions">Optimized CTAs, retargeting, AI-powered lead nurture</div>
+                </div>
+                <div class="race-card">
+                    <div class="race-phase">
+                        <span class="race-icon">❤️</span>
+                        <h4>Engage</h4>
+                    </div>
+                    <div class="race-focus">Cultivate loyalty & advocacy</div>
+                    <div class="race-actions">Email/CRM, community management, advocacy campaigns</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="branding-services">
+    <div class="section-container">
+        <h2 class="services-title">
+            What We Offer
+        </h2>
+        <p class="services-subtitle">
+            Comprehensive digital branding solutions tailored to your business needs
+        </p>
+        <div class="branding-services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3 class="service-title">Brand Discovery & Identity Design</h3>
+                <p class="service-description">
+                    Complete brand audit, identity creation, and visual design systems that reflect your unique value proposition and market position.
+                </p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3 class="service-title">Digital Platform Prioritization & Setup</h3>
+                <p class="service-description">
+                    Strategic platform selection and optimization across social media, websites, and digital touchpoints for maximum brand impact.
+                </p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3 class="service-title">LLMO, SEO, Paid Media & Social Activation</h3>
+                <p class="service-description">
+                    Advanced Large Language Model Optimization, search engine optimization, targeted advertising, and social media strategy execution.
+                </p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📢</div>
+                <h3 class="service-title">Influencer & PR Campaigns</h3>
+                <p class="service-description">
+                    Strategic influencer partnerships, public relations campaigns, and media outreach to amplify your brand's reach and credibility.
+                </p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3 class="service-title">Consistent Visual & Messaging Systems</h3>
+                <p class="service-description">
+                    Unified brand guidelines, messaging frameworks, and visual standards that ensure consistency across all digital touchpoints.
+                </p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3 class="service-title">Comprehensive Tracking & Analytics</h3>
+                <p class="service-description">
+                    Advanced analytics setup, performance monitoring, and data-driven insights to measure and optimize your brand's digital performance.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section id="discovery-form" class="branding-cta">
+    <div class="cta-container">
+        <h2 class="cta-title">
+            Start Your Digital Branding Journey
+        </h2>
+        <div class="cta-grid">
+            <!-- CTA Content -->
+            <div class="cta-content">
+                <h3 class="cta-content-title">Ready to transform your digital brand?</h3>
+                <p class="cta-description">
+                    Fill out our Digital Branding Discovery Questionnaire and we'll review your goals and craft a personalized proposal within 24 hours.
+                </p>
+                
+                <!-- Features List -->
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <span class="feature-icon">✓</span>
+                        <span>Free brand assessment and consultation</span>
+                    </div>
+                    <div class="cta-feature">
+                        <span class="feature-icon">✓</span>
+                        <span>Customized digital strategy roadmap</span>
+                    </div>
+                    <div class="cta-feature">
+                        <span class="feature-icon">✓</span>
+                        <span>24-hour response with detailed proposal</span>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="cta-buttons">
+                    <a href="https://form.jotform.com/252121444918050" target="_blank" class="cta-btn primary">
+                        🚀 Get Discovery Questionnaire
+                    </a>
+                    <a href="https://form.jotform.com/252121444918050" target="_blank" class="cta-btn secondary">
+                        💬 Contact Us Directly
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="cta-info">
+                <h3 class="cta-info-title">Get in Touch</h3>
+                
+                <!-- Contact Item -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        ✉️
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email Address</h4>
+                        <p>
+                            <a href="mailto:abhay@quantumtaskai.com" class="contact-email">
+                                abhay@quantumtaskai.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Commitment Statement -->
+                <div class="commitment-statement">
+                    <p class="commitment-text">
+                        Transforming Brands for the Digital Future with AI-powered solutions and expert cybersecurity strategies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+class DigitalBrandingManager {
+    constructor() {
+        this.processCards = document.querySelectorAll('.process-step-card');
+        this.raceCards = document.querySelectorAll('.race-card');
+        this.serviceCards = document.querySelectorAll('.service-card');
+        this.ctaButtons = document.querySelectorAll('.cta-btn');
+        
+        this.init();
+    }
+    
+    init() {
+        this.setupCardInteractions();
+        this.setupButtonHovers();
+        this.addScrollAnimations();
+        this.setupSmoothScrolling();
+    }
+    
+    setupCardInteractions() {
+        // Process step cards
+        this.processCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                this.highlightCard(card);
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                this.removeHighlight(card);
+            });
+        });
+
+        // RACE framework cards
+        this.raceCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                this.highlightCard(card);
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                this.removeHighlight(card);
+            });
+        });
+
+        // Service cards
+        this.serviceCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                this.highlightCard(card);
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                this.removeHighlight(card);
+            });
+        });
+    }
+    
+    highlightCard(card) {
+        card.style.transform = 'translateY(-4px)';
+        card.style.boxShadow = '0 20px 40px rgba(30, 64, 175, 0.15)';
+    }
+    
+    removeHighlight(card) {
+        card.style.transform = 'translateY(0)';
+        card.style.boxShadow = '';
+    }
+    
+    setupButtonHovers() {
+        this.ctaButtons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'translateY(-2px)';
+            });
+            
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = '';
+            });
+            
+            button.addEventListener('click', () => {
+                if (!button.classList.contains('loading')) {
+                    button.classList.add('loading');
+                    const originalText = button.textContent;
+                    button.textContent = '⏳ Loading...';
+                    
+                    setTimeout(() => {
+                        if (button.classList.contains('loading')) {
+                            button.classList.remove('loading');
+                            button.textContent = originalText;
+                        }
+                    }, 2000);
+                }
+            });
+        });
+    }
+    
+    addScrollAnimations() {
+        if ('IntersectionObserver' in window) {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe cards for scroll animations
+            [...this.processCards, ...this.raceCards, ...this.serviceCards].forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+            
+            // Observe sections
+            document.querySelectorAll('.section-header, .cta-content').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        }
+    }
+    
+    setupSmoothScrolling() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    new DigitalBrandingManager();
+});
+</script>
+{% endblock %}

@@ -65,6 +65,27 @@ def pricing_view(request):
         return render(request, 'core/pricing.html', {'sample_agents': []})
 
 
+@ratelimit(key='ip', rate='60/m', method='GET', block=False)
+def digital_branding_view(request):
+    """Digital branding services page with rate limiting"""
+    # Check if rate limited
+    if getattr(request, 'limited', False):
+        logger.warning(f"Digital branding page rate limit exceeded for IP {request.META.get('REMOTE_ADDR')}")
+        messages.warning(request, 'Too many requests. Please wait a moment before refreshing.')
+    
+    try:
+        context = {
+            'user_balance': request.user.wallet_balance if request.user.is_authenticated else 0,
+        }
+        
+        return render(request, 'core/digital_branding.html', context)
+        
+    except Exception as e:
+        logger.error(f"Digital branding view error: {e}")
+        messages.error(request, 'Unable to load digital branding page. Please try again.')
+        return render(request, 'core/digital_branding.html', {'user_balance': 0})
+
+
 def validate_contact_input(name, email, message, company=""):
     """Validate and sanitize contact form input"""
     errors = []
